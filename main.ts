@@ -271,4 +271,4 @@ for (let k = 1; k <= places; k++) {
   top10.push(pick);
 }
 
-writeFileSync(join(OUTPUT_DIR, task.output), `${JSON.stringify({ probabilities, top10 })}\n`);
+writeFileSync(join(OUTPUT_DIR, task.output || 'forecast.json'), `${JSON.stringify({ probabilities, top10 })}\n`);
